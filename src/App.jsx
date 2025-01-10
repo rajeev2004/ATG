@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import {HashRouter as Router,Routes,Route} from 'react-router-dom';
 import Homepage from "./components/Homepage";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -8,7 +8,7 @@ import Notfound from "./components/Notfound";
 import Resetpass from "./components/Resetpass";
 function App(){
   return (
-    <Router basename="/ATG">
+    <Router>
         <div>
             <Routes>
                 <Route exact path="/" element={<Register />}/>

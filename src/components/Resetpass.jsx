@@ -23,7 +23,7 @@ function Resetpass(){
         try{
             const result=await axios.post('https://atg-backend-49sl.onrender.com/reset-Password',{token,newpass});
             setsuccess(result.data.message);
-            setTimeout(()=>navigate('/login'),4000);
+            setTimeout(()=>navigate('#/login'),4000);
         }catch(err){
             console.error(err.message);
             seterror('error setting password');

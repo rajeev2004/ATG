@@ -20,7 +20,7 @@ function Forgotpass(){
             <form onSubmit={userForgotpassword}>
                 <input type="email" placeholder="Enter Email" value={email} onChange={(e)=>setEmail(e.target.value)} required />
                 <button type="submit">Forgot Password</button>
-                <button type="button" onClick={()=>navigate('/login')}>Go to login</button>
+                <button type="button" onClick={()=>navigate('#/login')}>Go to login</button>
             </form>
             {error && <p className="message">{error}</p>}
         </div>
