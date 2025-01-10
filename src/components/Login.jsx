@@ -12,7 +12,7 @@ function Login(){
             const result=await axios.post('https://atg-backend-49sl.onrender.com/login',{email,pass});
             setError(result.data.message);
             if(result.data.message==="login successful"){
-                navigate('#/homepage');
+                navigate('/homepage');
                 localStorage.setItem("token",result.data.token);
             }
         }catch(err){
@@ -27,8 +27,8 @@ function Login(){
                 <input type="password" placeholder="Enter Password" value={pass} onChange={(e)=>setPass(e.target.value)} required />
                 <button type="submit">Login</button>
                 <div className="buttonclass">
-                    <button type="button" onClick={()=>navigate('#/')}>New user? Register here...</button>
-                    <button type="button" onClick={()=>navigate('#/forgotpass')}>Forgot password</button>
+                    <button type="button" onClick={()=>navigate('/')}>New user? Register here...</button>
+                    <button type="button" onClick={()=>navigate('/forgotpass')}>Forgot password</button>
                 </div>
             </form>
             {error && <p className="message">{error}</p>}

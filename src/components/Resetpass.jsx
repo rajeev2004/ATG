@@ -24,7 +24,7 @@ function Resetpass(){
             const result=await axios.post('https://atg-backend-49sl.onrender.com/reset-Password',{token,newpass});
             if(result.data.success){
                 setsuccess(result.data.message);
-                setTimeout(()=>navigate('#/login'),4000);
+                setTimeout(()=>navigate('/login'),4000);
             }else{
                 seterror('password reset failed');
             }

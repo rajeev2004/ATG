@@ -4,7 +4,7 @@ function Homepage(){
     const navigate=useNavigate();
     async function logout(){
         localStorage.removeItem('token');
-        navigate('#/login');
+        navigate('/login');
     }
     return(
         <div className="container">
