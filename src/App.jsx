@@ -8,7 +8,7 @@ import Notfound from "./components/Notfound";
 import Resetpass from "./components/Resetpass";
 function App(){
   return (
-    <Router>
+    <Router basename="/ATG">
         <div>
             <Routes>
                 <Route exact path="/" element={<Register />}/>
