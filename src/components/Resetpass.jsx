@@ -34,7 +34,7 @@ function Resetpass(){
         }
     }
     return(
-        <div>
+        <div className="container">
             {error && <p className="message">{error}</p>}
             {success && <p className="message">{success}</p>}
             <form onSubmit={formSubmit}>
